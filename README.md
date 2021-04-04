@@ -2,11 +2,11 @@
 
 A simple web server for publishing readings from a DHT11/22 temperature/humidity sensor.
 
-This application serves two purposes. The first is how to read data from a DHT11/22 sensor and the second is how to serve data using a python web server in a background thread.
+This application serves two purposes. The first is to show how to read data from a DHT11/22 sensor and the second is to show how to serve data using a python web server in a background thread.
 
 Normally you would not have the web server in the same application as the data collection. Instead you would pass the data on to some data collection mechanism, for example a web API, a message queue or a database.
 
-This example uses the Adafruit CircuitPython DHT library. See the [instructions at Adafruit](https://learn.adafruit.com/dht-humidity-sensing-on-raspberry-pi-with-gdocs-logging) for more information.
+This example uses the Adafruit CircuitPython DHT library. See the [instructions at Adafruit](https://learn.adafruit.com/dht-humidity-sensing-on-raspberry-pi-with-gdocs-logging) for more information about it.
 
 ## Prerequisites
 
@@ -24,23 +24,25 @@ Optionally:
 
 ## Wiring
 
-According to the specifications, the DHT22 sensor requires a pull-down resisor on its data pin. This is a wiring diagram on how to connect this:
+According to the specifications, the DHT22 sensor requires a pull-down resisor on its data pin. Here is a wiring diagram on how to connect this:
 
 ![DHT sensor wiring diagram with pulldown resistor](rpi-dht22-breadboard-big_bb.svg)
 
-Since the DHT22 package often contains an internal pulldown resistor, then we can simplify the wiring diagram and connect it directly to the Raspberry Pi:
+Since the DHT22 package often contains an internal pulldown resistor, we can simplify the wiring diagram and connect the sensor directly to the Raspberry Pi:
 
 ![DHT sensor wiring diagram](rpi-dht22_bb.svg)
 
 ## Software
 
-Make sure that the operating system is set up with network access.
+Make sure that the Raspberry Pi operating system is set up with network access.
 
 ### Setup
 
-Copy the [dht-web.py](dht-web.py) file into a folder on the Raspberry Pi.
+Create a new folder on the Raspbery Pi, for example `dht-web`. Change the active directory to this folder.
 
-Set up python environment and install required libraries:
+Copy the [dht-web.py](dht-web.py) file into the folder.
+
+Set up the python environment and install required libraries:
 
 ```bash
 python3 -m venv env
