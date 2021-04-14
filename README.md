@@ -26,11 +26,11 @@ Optionally:
 
 According to the specifications, the DHT22 sensor requires a pull-down resisor on its data pin. Here is a wiring diagram on how to connect this:
 
-![DHT sensor wiring diagram with pulldown resistor](rpi-dht22-breadboard-big_bb.svg)
+![DHT sensor wiring diagram with pulldown resistor](images/rpi-dht22-breadboard-big_bb.svg)
 
 Since the DHT22 package often contains an internal pulldown resistor, we can simplify the wiring diagram and connect the sensor directly to the Raspberry Pi:
 
-![DHT sensor wiring diagram](rpi-dht22_bb.svg)
+![DHT sensor wiring diagram](images/rpi-dht22_bb.svg)
 
 ## Software
 
@@ -67,4 +67,4 @@ Use a web browser and navigate to port 8080 on the Raspberry Pi's IP address:
 
 You should see the last recorded sensor readings. Reload the page to see updated values.
 
-![DHT readings web page](dht-web-browser.png)
+![DHT readings web page](images/dht-web-browser.png)
